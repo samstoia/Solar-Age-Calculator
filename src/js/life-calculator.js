@@ -26,6 +26,6 @@ export default class LifeCalculator {
   }
 
   lifespan(age) {
-    return age > this.lifeExpectancy() ? `You have lived ${age - this.lifeExpectancy()} years beyond your expectancy! Congratulations!` : `You have a life expectancy of ${this.lifeExpectancy() - age} years.`;
+    return this.lifeExpectancy() - age;
   }
 }

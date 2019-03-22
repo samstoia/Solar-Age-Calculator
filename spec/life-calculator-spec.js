@@ -69,10 +69,10 @@ describe('LifeCalculator', function() {
       let userAge = new AgeCalculator(userDate).checkAge();
       let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
       let lifespan = calculator.lifespan(userAge);
-      expect(lifespan).toEqual('You have a life expectancy of 58 years.');
+      expect(lifespan).toEqual(58);
     });
 
-    it('should use a mock-up of lifeSpan function to determine how much the user has outlived their expectancy', function() {
+    it('should use the lifeSpan function to determine how much the user has outlived their expectancy', function() {
       let userDate = new Date("1993-11-04");
       let userAge = new AgeCalculator(userDate).checkAge();
       let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
@@ -81,31 +81,37 @@ describe('LifeCalculator', function() {
       if(userAge > lifeExpectancy) {
         lifespan = `You have lived ${userAge - lifeExpectancy} years beyond your expectancy! Congratulations!`;
       } else {
-        lifespan = `You have a life expectancy of ${lifeExpectancy - userAge} years.`
+        lifespan = `You have a life expectancy of ${lifeExpectancy - userAge} years.`;
       }
-      expect(lifespan).toEqual(`You have a life expectancy of ${lifeExpectancy - userAge} years.`);
-    });
-
-    it('should use a mock-up of lifeSpan function to determine how much the user has outlived their expectancy', function() {
-      let userDate = new Date("1923-11-04");
-      let userAge = new AgeCalculator(userDate).checkAge();
-      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
-      let lifeExpectancy = calculator.lifeExpectancy();
-      let lifespan;
-      if(userAge > lifeExpectancy) {
-        lifespan = 'You have lived 12 years beyond your expectancy! Congratulations!';
-      } else {
-        lifespan = lifeExpectancy - userAge;
-      }
-      expect(lifespan).toEqual('You have lived 12 years beyond your expectancy! Congratulations!');
+      expect(lifespan).toEqual(`You have a life expectancy of 58 years.`);
     });
 
     it('should use the lifeSpan function to determine how much the user has outlived their expectancy', function() {
       let userDate = new Date("1923-11-04");
       let userAge = new AgeCalculator(userDate).checkAge();
       let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
-      let lifespan = calculator.lifespan(userAge);
+      let lifeExpectancy = calculator.lifeExpectancy();
+      let lifespan;
+      if(userAge > lifeExpectancy) {
+        lifespan = `You have lived ${userAge - lifeExpectancy} years beyond your expectancy! Congratulations!`;
+      } else {
+        lifespan = `You have a life expectancy of ${lifeExpectancy - userAge} years.`;
+      }
       expect(lifespan).toEqual('You have lived 12 years beyond your expectancy! Congratulations!');
+    });
+
+    it('should create a function to convert a user lifespan to a celestial body year', function() {
+      let userDate = new Date("1983-11-04");
+      let userAge = new AgeCalculator(userDate).checkAge();
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let lifeExpectancy = calculator.lifeExpectancy();
+      let lifespan;
+      if(userAge > lifeExpectancy) {
+        lifespan = `You have lived ${(userAge - lifeExpectancy) * 1.88} Martian years beyond your expectancy! Congratulations!`;
+      } else {
+        lifespan = `You have a life expectancy of ${(lifeExpectancy - userAge) * 1.88} Martian years.`;
+      }
+      expect(lifespan).toEqual('You have a life expectancy of 90.24 Martian years.');
     });
 
     // life expectancy remaining on celestial body
