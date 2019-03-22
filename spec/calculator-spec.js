@@ -13,4 +13,11 @@ describe('Calculator', function() {
       expect(age).toEqual(25);
     });
 
+    it('should use the checkAge function to calculate user age', function() {
+      let userDate = new Date("1993-11-04");
+      let calculator = new Calculator(userDate);
+      let result = calculator.checkAge();
+      expect(result).toEqual(Math.floor((Date.now() - userDate) / 31557600000));
+    });
+
 });
