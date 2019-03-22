@@ -1,4 +1,3 @@
-import AgeCalculator from './../src/js/age-calculator.js';
 import LifeCalculator from './../src/js/life-calculator.js';
 
 describe('LifeCalculator', function() {
@@ -13,7 +12,7 @@ describe('LifeCalculator', function() {
     it('should use the checkBMI function to determine users bmi', function() {
       let height = 72; // 6ft
       let weight = 200; // 200lbs
-      let bmi = new LifeCalculator(height, weight).checkBMI();
+      let bmi = new LifeCalculator(height, weight, 0,0,0,0,0,0,0).checkBMI();
       expect(bmi).toEqual('27.12');
     });
 
@@ -29,12 +28,7 @@ describe('LifeCalculator', function() {
       expect(lifestyle).toEqual('1.14');
     });
 
-    it('should determine users life expectancy to be 81 through bmi and lifestyles', function() {
-      let userDate = new Date("1993-11-04");
-      let calculator = new AgeCalculator(userDate);
-      let age = calculator.checkAge();
-      let bmi = new LifeCalculator(72, 200).checkBMI();
-
+    it('should use the lifestyleMod function to determine a lifestyle modifier for user', function() {
       let health = 1.1 // rarely gets sick
       let exercise = 1.1; // Moderate activity level
       let alcohol = 0.9; //  5+ drinks weekly
@@ -42,17 +36,22 @@ describe('LifeCalculator', function() {
       let drugUse = 1 // not an illicit drug user
       let petOwner = 1.05 // owns a pet
       let relationship = 1 // is not in a long-term relationship
-      let lifestyle = (health * exercise * alcohol * smoking * drugUse * petOwner * relationship);
+      let lifestyle = new LifeCalculator(0,0, health, exercise, alcohol, smoking, drugUse, petOwner, relationship).lifestyleMod();
+      expect(lifestyle).toEqual('1.14');
+    });
 
-      let lifeExpectancy = Math.floor((bmi * lifestyle) + 50);
-      expect(lifeExpectancy).toEqual(81);
+    it('should determine users life expectancy to be 81 through bmi and lifestyle', function() {
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let bmi = calculator.checkBMI();
+      let lifestyle = calculator.lifestyleMod();
+      let lifeExpectancy = ((lifestyle / bmi) * 1000 + 45).toFixed(0);
+      expect(lifeExpectancy).toEqual('83');
     });
 
     it('should use the lifeExpectancy function to determine how long the user may live', function() {
-      let userDate = new Date("1993-11-04");
-      let calculator = new AgeCalculator(userDate);
-      let age = calculator.checkAge();
-      expect(1).toEqual(1);
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let lifeExpectancy = calculator.lifeExpectancy();
+      expect(lifeExpectancy).toEqual('83');
     });
 
     // life expectancy remaining on earth
