@@ -294,11 +294,11 @@ A web application that allows a user to understand the different solar cycles (y
   </tr>
   <tr>
     <td> Input </td>
-    <td> TBD </td>
+    <td> Personal information about height, weight, lifestyle </td>
   </tr>
   <tr>
     <td> Output </td>
-    <td> TBD </td>
+    <td> Life expectancy </td>
   </tr>
   <tr>
     <td> Notes </td>

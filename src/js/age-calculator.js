@@ -1,4 +1,4 @@
-export default class Calculator {
+export default class AgeCalculator {
   constructor(userDate) {
     this.day = userDate.getDate();
     this.month = userDate.getMonth();
