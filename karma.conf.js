@@ -12,14 +12,18 @@ module.exports = function(config) {
     exclude: [
     ],
     preprocessors: {
-      'src/*.js': ['webpack', 'sourcemap'],
-      'spec/*spec.js': ['webpack', 'sourcemap']
+      'src/*.js': ['webpack'],
+      'spec/*spec.js': ['webpack']
     },
     plugins: [
       'karma-jquery',
       'karma-webpack',
       'karma-jasmine',
       'karma-chrome-launcher',
+      'karma-firefox-launcher',
+      'karma-ie-launcher',
+      'karma-opera-launcher',
+      'karma-safari-launcher',
       'karma-jasmine-html-reporter'
     ],
     reporters: ['progress', 'kjhtml'],
@@ -27,7 +31,13 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: [
+      'Chrome',
+      'Firefox',
+      'IE',
+      'Opera',
+      'Safari'
+    ],
     singleRun: false,
     concurrency: Infinity
   })
