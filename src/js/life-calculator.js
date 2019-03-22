@@ -29,53 +29,53 @@ export default class LifeCalculator {
     return this.lifeExpectancy() - age;
   }
 
-  mercuryLifespan() {
-    let lifespan = this.lifespan();
-    return lifespan * 0.24;
+  mercuryLifespan(age) {
+    let lifespan = this.lifespan(age);
+    return (lifespan * 0.24).toFixed(2);
   }
 
-  venusLifespan() {
-    let lifespan = this.lifespan();
-    return lifespan * 0.62;
+  venusLifespan(age) {
+    let lifespan = this.lifespan(age);
+    return (lifespan * 0.62).toFixed(2);
   }
 
-  marsLifespan() {
-    let lifespan = this.lifespan();
-    return lifespan * 1.88;
+  marsLifespan(age) {
+    let lifespan = this.lifespan(age);
+    return (lifespan * 1.88).toFixed(2);
   }
 
-  ceresLifespan() {
-    let lifespan = this.lifespan();
-    return lifespan * 4.6;
+  ceresLifespan(age) {
+    let lifespan = this.lifespan(age);
+    return (lifespan * 4.6).toFixed(2);
   }
 
-  jupiterLifespan() {
-    let lifespan = this.lifespan();
-    return lifespan * 11.86;
+  jupiterLifespan(age) {
+    let lifespan = this.lifespan(age);
+    return (lifespan * 11.86).toFixed(2);
   }
 
-  saturnLifespan() {
-    let lifespan = this.lifespan();
-    return lifespan * 29.5;
+  saturnLifespan(age) {
+    let lifespan = this.lifespan(age);
+    return (lifespan * 29.5).toFixed(1);
   }
 
-  caelumLifespan() {
-    let lifespan = this.lifespan();
-    return lifespan * 84.3;
+  caelumLifespan(age) {
+    let lifespan = this.lifespan(age);
+    return (lifespan * 84.3).toFixed(2);
   }
 
-  neptuneLifespan() {
-    let lifespan = this.lifespan();
-    return lifespan * 165;
+  neptuneLifespan(age) {
+    let lifespan = this.lifespan(age);
+    return (lifespan * 165).toFixed(0);
   }
 
-  plutoLifespan() {
-    let lifespan = this.lifespan();
-    return lifespan * 247.7;
+  plutoLifespan(age) {
+    let lifespan = this.lifespan(age);
+    return (lifespan * 247.7).toFixed(1);
   }
 
-  erisLifespan() {
-    let lifespan = this.lifespan();
-    return lifespan * 558;
+  erisLifespan(age) {
+    let lifespan = this.lifespan(age);
+    return (lifespan * 558).toFixed(0);
   }
 }

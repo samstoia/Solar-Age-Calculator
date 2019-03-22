@@ -100,7 +100,7 @@ describe('LifeCalculator', function() {
       expect(lifespan).toEqual('You have lived 12 years beyond your expectancy! Congratulations!');
     });
 
-    it('should create a function to convert a user lifespan to a celestial body year', function() {
+    it('should create a function to convert a user lifespan to a celestial body years', function() {
       let userDate = new Date("1983-11-04");
       let userAge = new AgeCalculator(userDate).checkAge();
       let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
@@ -114,10 +114,104 @@ describe('LifeCalculator', function() {
       expect(lifespan).toEqual('You have a life expectancy of 90.24 Martian years.');
     });
 
-    // life expectancy remaining on celestial body
+    it('should use mercuryLifespan to convert a user lifespan to a Mercury years', function() {
+      let userDate = new Date("1983-11-04");
+      let userAge = new AgeCalculator(userDate).checkAge();
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let lifeExpectancy = calculator.lifeExpectancy();
+      let lifespan = calculator.lifespan(userAge);
+      let mercuryLifespan = calculator.mercuryLifespan(userAge);
+      expect(mercuryLifespan).toEqual('11.52');
+    });
 
-    // foreach celestial body (x10), life expectancy remaining
+    it('should use venusLifespan to convert a user lifespan to a Venus years', function() {
+      let userDate = new Date("1983-11-04");
+      let userAge = new AgeCalculator(userDate).checkAge();
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let lifeExpectancy = calculator.lifeExpectancy();
+      let lifespan = calculator.lifespan(userAge);
+      let venusLifespan = calculator.venusLifespan(userAge);
+      expect(venusLifespan).toEqual('29.76');
+    });
 
-    // user age exceeds life expectancy, by how much
+    it('should use marsLifespan to convert a user lifespan to a Mars years', function() {
+      let userDate = new Date("1983-11-04");
+      let userAge = new AgeCalculator(userDate).checkAge();
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let lifeExpectancy = calculator.lifeExpectancy();
+      let lifespan = calculator.lifespan(userAge);
+      let marsLifespan = calculator.marsLifespan(userAge);
+      expect(marsLifespan).toEqual('90.24');
+    });
+
+    it('should use ceresLifespan to convert a user lifespan to a Ceres years', function() {
+      let userDate = new Date("1983-11-04");
+      let userAge = new AgeCalculator(userDate).checkAge();
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let lifeExpectancy = calculator.lifeExpectancy();
+      let lifespan = calculator.lifespan(userAge);
+      let ceresLifespan = calculator.ceresLifespan(userAge);
+      expect(ceresLifespan).toEqual('220.80');
+    });
+
+    it('should use jupiterLifespan to convert a user lifespan to a Jupiter years', function() {
+      let userDate = new Date("1983-11-04");
+      let userAge = new AgeCalculator(userDate).checkAge();
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let lifeExpectancy = calculator.lifeExpectancy();
+      let lifespan = calculator.lifespan(userAge);
+      let jupiterLifespan = calculator.jupiterLifespan(userAge);
+      expect(jupiterLifespan).toEqual('569.28');
+    });
+
+    it('should use saturnLifespan to convert a user lifespan to a Saturn years', function() {
+      let userDate = new Date("1983-11-04");
+      let userAge = new AgeCalculator(userDate).checkAge();
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let lifeExpectancy = calculator.lifeExpectancy();
+      let lifespan = calculator.lifespan(userAge);
+      let saturnLifespan = calculator.saturnLifespan(userAge);
+      expect(saturnLifespan).toEqual('1416.0');
+    });
+
+    it('should use caelumLifespan to convert a user lifespan to a Caelum years', function() {
+      let userDate = new Date("1983-11-04");
+      let userAge = new AgeCalculator(userDate).checkAge();
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let lifeExpectancy = calculator.lifeExpectancy();
+      let lifespan = calculator.lifespan(userAge);
+      let caelumLifespan = calculator.caelumLifespan(userAge);
+      expect(caelumLifespan).toEqual('4046.40');
+    });
+
+    it('should use neptuneLifespan to convert a user lifespan to a Neptune years', function() {
+      let userDate = new Date("1983-11-04");
+      let userAge = new AgeCalculator(userDate).checkAge();
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let lifeExpectancy = calculator.lifeExpectancy();
+      let lifespan = calculator.lifespan(userAge);
+      let neptuneLifespan = calculator.neptuneLifespan(userAge);
+      expect(neptuneLifespan).toEqual('7920');
+    });
+
+    it('should use plutoLifespan to convert a user lifespan to a Pluto years', function() {
+      let userDate = new Date("1983-11-04");
+      let userAge = new AgeCalculator(userDate).checkAge();
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let lifeExpectancy = calculator.lifeExpectancy();
+      let lifespan = calculator.lifespan(userAge);
+      let plutoLifespan = calculator.plutoLifespan(userAge);
+      expect(plutoLifespan).toEqual('11889.6');
+    });
+
+    it('should use erisLifespan to convert a user lifespan to a Eris years', function() {
+      let userDate = new Date("1983-11-04");
+      let userAge = new AgeCalculator(userDate).checkAge();
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let lifeExpectancy = calculator.lifeExpectancy();
+      let lifespan = calculator.lifespan(userAge);
+      let erisLifespan = calculator.erisLifespan(userAge);
+      expect(erisLifespan).toEqual('26784');
+    });
 
 });
