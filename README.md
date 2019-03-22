@@ -212,7 +212,7 @@ TODO
   </tr>
   <tr>
     <td> Behavior </td>
-    <td> As a user interested in astronomy and concepts of mortality, I want to be able to see my age in Neptune years. </td>
+    <td> As a user interested in astronomy, I want to be able to see my age in Neptune years. </td>
   </tr>
   <tr>
     <td> Input </td>
@@ -260,11 +260,11 @@ TODO
 
 <table>
   <tr>
-    <th> Scenario 09 </th><th></th>
+    <th> Scenario 10 </th><th></th>
   </tr>
   <tr>
     <td> Behavior </td>
-    <td> As a user interested in astronomy, I want to be able to see my age in Pluto years. </td>
+    <td> As a user interested in astronomy, I want to be able to see my age in Eris years. </td>
   </tr>
   <tr>
     <td> Input </td>
@@ -272,11 +272,141 @@ TODO
   </tr>
   <tr>
     <td> Output </td>
-    <td> 6192.5 </td>
+    <td> 13,950 </td>
   </tr>
   <tr>
     <td> Notes </td>
-    <td> Pluto years are 247.7 Telluris years </td>
+    <td> Eris years are 558 Telluris years </td>
+  </tr>
+  <tr>
+    <td> Completion </td>
+    <td> False </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th> Scenario 11 </th><th></th>
+  </tr>
+  <tr>
+    <td> Behavior </td>
+    <td> As a user interested in astronomy and concepts of mortality, I want to be able to see my average remaining lifespan in years on each celestial body. </td>
+  </tr>
+  <tr>
+    <td> Input </td>
+    <td> TBD </td>
+  </tr>
+  <tr>
+    <td> Output </td>
+    <td> TBD </td>
+  </tr>
+  <tr>
+    <td> Notes </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> Completion </td>
+    <td> False </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th> Scenario 12 </th><th></th>
+  </tr>
+  <tr>
+    <td> Behavior </td>
+    <td> As a user interested in the concepts of mortality, I want to be able to see how far beyond the average life expectancy I have lived, if I have. </td>
+  </tr>
+  <tr>
+    <td> Input </td>
+    <td> 85 </td>
+  </tr>
+  <tr>
+    <td> Output </td>
+    <td> TBD </td>
+  </tr>
+  <tr>
+    <td> Notes </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> Completion </td>
+    <td> False </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th> Scenario 13 </th><th></th>
+  </tr>
+  <tr>
+    <td> Behavior </td>
+    <td> As a user interested in celebrating birthdays, I want to be able to see when my next birthday on each planet would be. </td>
+  </tr>
+  <tr>
+    <td> Input </td>
+    <td> TBD </td>
+  </tr>
+  <tr>
+    <td> Output </td>
+    <td> TBD </td>
+  </tr>
+  <tr>
+    <td> Notes </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> Completion </td>
+    <td> False </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th> Scenario 14 </th><th></th>
+  </tr>
+  <tr>
+    <td> Behavior </td>
+    <td> As a fan of the Rolling Stones, I want to know how old Keith Richards will be in dog years on the planet Jupiter in 2073. </td>
+  </tr>
+  <tr>
+    <td> Input </td>
+    <td> TBD </td>
+  </tr>
+  <tr>
+    <td> Output </td>
+    <td> TBD </td>
+  </tr>
+  <tr>
+    <td> Notes </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> Completion </td>
+    <td> False </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th> Scenario 14 </th><th></th>
+  </tr>
+  <tr>
+    <td> Behavior </td>
+    <td> As a believer in the dominance of humanity over other species, I want to know how many mayfly lifespans I have outlived until now. </td>
+  </tr>
+  <tr>
+    <td> Input </td>
+    <td> 25 years </td>
+  </tr>
+  <tr>
+    <td> Output </td>
+    <td> 2,629,800 </td>
+  </tr>
+  <tr>
+    <td> Notes </td>
+    <td> There are 525,960 minutes in one year. </td>
   </tr>
   <tr>
     <td> Completion </td>
