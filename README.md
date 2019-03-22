@@ -424,9 +424,13 @@ A web application that allows a user to understand the different solar cycles (y
 1. Download and install required software: Node.js, npm
 2. Clone [this repository](https://github.com/LondresRi/Solar-Age-Calculator): _$ git clone (repo HTTPS)_
 
+#### Prepare
+1. Navigate to the application directory: _$ cd Solar-Age-Calculator_
+2. Execute the commands _$ npm install webpack@4.0.1 --save-dev_, _$npm install webpack-dev-server@3.1.0 --save-dev_ and _$ npm install_
+
 #### Open Locally - Browser
 1. Navigate to the application directory: _$ cd Solar-Age-Calculator_
-2. Execute the commands _$ npm install_ and _$ npm run start_
+2. Execute the command _$ npm run start_
 3. The application will open in your preferred browser
 
 #### Edit
