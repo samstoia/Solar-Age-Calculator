@@ -28,4 +28,54 @@ export default class LifeCalculator {
   lifespan(age) {
     return this.lifeExpectancy() - age;
   }
+
+  mercuryLifespan() {
+    let lifespan = this.lifespan();
+    return lifespan * 0.24;
+  }
+
+  venusLifespan() {
+    let lifespan = this.lifespan();
+    return lifespan * 0.62;
+  }
+
+  marsLifespan() {
+    let lifespan = this.lifespan();
+    return lifespan * 1.88;
+  }
+
+  ceresLifespan() {
+    let lifespan = this.lifespan();
+    return lifespan * 4.6;
+  }
+
+  jupiterLifespan() {
+    let lifespan = this.lifespan();
+    return lifespan * 11.86;
+  }
+
+  saturnLifespan() {
+    let lifespan = this.lifespan();
+    return lifespan * 29.5;
+  }
+
+  caelumLifespan() {
+    let lifespan = this.lifespan();
+    return lifespan * 84.3;
+  }
+
+  neptuneLifespan() {
+    let lifespan = this.lifespan();
+    return lifespan * 165;
+  }
+
+  plutoLifespan() {
+    let lifespan = this.lifespan();
+    return lifespan * 247.7;
+  }
+
+  erisLifespan() {
+    let lifespan = this.lifespan();
+    return lifespan * 558;
+  }
 }

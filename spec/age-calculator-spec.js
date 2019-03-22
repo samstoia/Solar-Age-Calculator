@@ -36,9 +36,7 @@ describe('AgeCalculator', function() {
 
     it('should use the mercuryAge function correctly', function() {
       let userDate = new Date("1993-11-04");
-      let calculator = new AgeCalculator(userDate);
-      let userAge = calculator.checkAge();
-      let result = calculator.mercuryAge();
+      let result = new AgeCalculator(userDate).mercuryAge();
       expect(result).toEqual(Math.floor((Date.now() - userDate) / 31557600000) * 0.24)
     });
 
@@ -51,9 +49,7 @@ describe('AgeCalculator', function() {
 
     it('should use the venusAge function correctly', function() {
       let userDate = new Date("1993-11-04");
-      let calculator = new AgeCalculator(userDate);
-      let userAge = calculator.checkAge();
-      let result = calculator.venusAge();
+      let result = new AgeCalculator(userDate).venusAge();
       expect(result).toEqual(Math.floor((Date.now() - userDate) / 31557600000) * 0.62)
     });
 
@@ -66,9 +62,7 @@ describe('AgeCalculator', function() {
 
     it('should use the marsAge function correctly', function() {
       let userDate = new Date("1993-11-04");
-      let calculator = new AgeCalculator(userDate);
-      let userAge = calculator.checkAge();
-      let result = calculator.marsAge();
+      let result = new AgeCalculator(userDate).marsAge();
       expect(result).toEqual(Math.floor((Date.now() - userDate) / 31557600000) * 1.88)
     });
 
@@ -81,9 +75,7 @@ describe('AgeCalculator', function() {
 
     it('should use the ceresAge function correctly', function() {
       let userDate = new Date("1993-11-04");
-      let calculator = new AgeCalculator(userDate);
-      let userAge = calculator.checkAge();
-      let result = calculator.ceresAge();
+      let result = new AgeCalculator(userDate).ceresAge();
       expect(result).toEqual(Math.floor((Date.now() - userDate) / 31557600000) * 4.6)
     });
 
@@ -96,9 +88,7 @@ describe('AgeCalculator', function() {
 
     it('should use the jupiterAge function correctly', function() {
       let userDate = new Date("1993-11-04");
-      let calculator = new AgeCalculator(userDate);
-      let userAge = calculator.checkAge();
-      let result = calculator.jupiterAge();
+      let result = new AgeCalculator(userDate).jupiterAge();
       expect(result).toEqual(Math.floor((Date.now() - userDate) / 31557600000) * 11.86)
     });
 
@@ -111,9 +101,7 @@ describe('AgeCalculator', function() {
 
     it('should use the saturnAge function correctly', function() {
       let userDate = new Date("1993-11-04");
-      let calculator = new AgeCalculator(userDate);
-      let userAge = calculator.checkAge();
-      let result = calculator.saturnAge();
+      let result = new AgeCalculator(userDate).saturnAge();
       expect(result).toEqual(Math.floor((Date.now() - userDate) / 31557600000) * 29.5)
     });
 
@@ -126,9 +114,7 @@ describe('AgeCalculator', function() {
 
     it('should use the caelumAge function correctly', function() {
       let userDate = new Date("1993-11-04");
-      let calculator = new AgeCalculator(userDate);
-      let userAge = calculator.checkAge();
-      let result = calculator.caelumAge();
+      let result = new AgeCalculator(userDate).caelumAge();
       expect(result).toEqual(Math.floor((Date.now() - userDate) / 31557600000) * 84.3)
     });
 
@@ -141,9 +127,7 @@ describe('AgeCalculator', function() {
 
     it('should use the neptuneAge function correctly', function() {
       let userDate = new Date("1993-11-04");
-      let calculator = new AgeCalculator(userDate);
-      let userAge = calculator.checkAge();
-      let result = calculator.neptuneAge();
+      let result = new AgeCalculator(userDate).neptuneAge();
       expect(result).toEqual(Math.floor((Date.now() - userDate) / 31557600000) * 165)
     });
 
@@ -156,9 +140,7 @@ describe('AgeCalculator', function() {
 
     it('should use the plutoAge function correctly', function() {
       let userDate = new Date("1993-11-04");
-      let calculator = new AgeCalculator(userDate);
-      let userAge = calculator.checkAge();
-      let result = calculator.plutoAge();
+      let result = new AgeCalculator(userDate).plutoAge();
       expect(result).toEqual(Math.floor((Date.now() - userDate) / 31557600000) * 247.7)
     });
 
@@ -171,9 +153,7 @@ describe('AgeCalculator', function() {
 
     it('should use the erisAge function correctly', function() {
       let userDate = new Date("1993-11-04");
-      let calculator = new AgeCalculator(userDate);
-      let userAge = calculator.checkAge();
-      let result = calculator.erisAge();
+      let result = new AgeCalculator(userDate).erisAge();
       expect(result).toEqual(Math.floor((Date.now() - userDate) / 31557600000) * 558)
     });
 
