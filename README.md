@@ -10,7 +10,7 @@
 ----------
 
 ## Description
-TODO
+A web application that allows a user to understand the different solar cycles (year lengths) of different planets.
 
 ## Known Bugs
 
@@ -417,90 +417,37 @@ TODO
 ## Setup and Use
 
 #### Prerequisites
-* .NET Core 1.1 SDK or higher
-* .NET Core Runtime 1.1 or higher
-* [Mono](https://www.mono-project.com/)
+* [Node.js](https://nodejs.org/en/)
+* [Node.js Package Manager (npm)](https://www.npmjs.com/)
 
 #### Download Repo
-1. Download required software: .NET Core SDK, .NET Core Runtime, Mono
-2. Clone [this repository](https://github.com/LondresRi/TODO): _$ git clone (repo HTTPS)_
+1. Download and install required software: Node.js, npm
+2. Clone [this repository](https://github.com/LondresRi/Galactic-Age-Calculator): _$ git clone (repo HTTPS)_
 
 #### Open Locally - Browser
-1. Navigate to the application directory: _$ cd TODO.Solution/TODO_
-2. Execute the commands _$ dotnet restore_, _$ dotnet build_, and then _$ dotnet run_
-3. Open the localhost link provided by the terminal in your preferred browser
-```
-D:\user\TODO.Solution\TODO>dotnet restore
-D:\user\TODO.Solution\TODO>dotnet build
-D:\user\TODO.Solution\TODO>dotnet run
-Hosting environment: Production
-Content root path: D:\user\TODO.Solution\TODO
-Now listening on: http://localhost:5000
-Application started. Press Ctrl+C to shut down.
-```
-
-#### Open Locally - Mono
-1. Navigate to the working directory: _$ cd TODO.Solution_
-2. Use your preferred IDE or editor to edit the project
-3. Open the Program.exe file or use _$ mono Program.exe_ to run application
-
-#### Compile Locally
-1. Navigate to the project directory: _$ cd TODO.Solution/TODO_
-2. Execute _$ mcs Program.cs Models/TODO.cs_ to compile new Program.exe file
-
-#### MySql Database Import
-1. Open your preferred database manager
-2. Import TODO.sql
-3. Review database to ensure import was successful
-
-#### MySql Database Recreation
-1. Open MySql in your preferred terminal, see [MySql Documentation](https://dev.mysql.com/doc/) for further instructions
-2. Execute commands _CREATE DATABASE TODO;_, and _USE TODO;_ to create and select the database
-3. Execute commands _CREATE TABLE TODO (id serial PRIMARY KEY, name VARCHAR(255));_, TODOETC to create data tables within the database
-
-```
-D:\user>mysql -u root -p
-Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is [Your connection id here]
-Server version: [Your server version and system here]
-
-Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
-
-Oracle is a registered trademark of Oracle Corporation and/or its
-affiliates. Other names may be trademarks of their respective
-owners.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-mysql>CREATE DATABASE TODO;
-Query OK, 1 row affected (0.00 sec)
-
-mysql>USE TODO;
-Database changed
-
-mysql>CREATE TABLE TODO (id serial PRIMARY KEY, name VARCHAR(255));
-Query OK, 0 row affected (0.00 sec)
-```
+1. Navigate to the application directory: _$ cd Galactic-Age-Calculator_
+2. Execute the commands _$ npm install_ and _$ npm run start_
+3. The application will open in your preferred browser
 
 #### Edit
-1. Navigate to the working directory: _$ cd TODO.Solution_
+1. Navigate to the application directory: _$ cd Galactic-Age-Calculator_
 2. Use your preferred IDE or editor to edit the project
 
 #### Test
-1. Navigate to the working directory: _$ cd TODO.Solution/TODO.Tests_
-2. Execute _$ dotnet tests_ to run application tests
+1. Navigate to the application directory: _$ cd Galactic-Age-Calculator_
+2. Execute _$ npm test_ to run application tests
 
 
 ## Built With
 
 * Linux Ubuntu 18.04 bionic
 * Atom (IDE)
-* C#
-* Microsoft SDK
-* .NET Core 2.0
-* .ASPNetCore
-* MySql
-* GitBash
+* JavaScript ES6
+* Node.js
+* npm
+* Jasmine
+* Karma
+* ESLint
 
 ## Contributors
 
@@ -547,3 +494,7 @@ SOFTWARE.
 #### [The Internet](https://webfoundation.org/)
 > "...the first thing that humanity has built that humanity doesn't understand..."
 > - Eric Schmidt, Google (Alphabet Inc.)
+
+#### [The Universe](https://en.wikipedia.org/wiki/Universe)
+> "Only two things are infinite, the universe and human stupidity, and I'm not sure about the former."
+> - Albert Einstein
