@@ -1,3 +1,4 @@
+import AgeCalculator from './../src/js/age-calculator.js';
 import LifeCalculator from './../src/js/life-calculator.js';
 
 describe('LifeCalculator', function() {
@@ -54,7 +55,30 @@ describe('LifeCalculator', function() {
       expect(lifeExpectancy).toEqual('83');
     });
 
-    // life expectancy remaining on earth
+    it('should create a function to determine how much longer the user may live based on life expectancy', function() {
+      let userDate = new Date("1993-11-04");
+      let userAge = new AgeCalculator(userDate).checkAge();
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let lifeExpectancy = calculator.lifeExpectancy();
+      let lifeSpan = lifeExpectancy - userAge;
+      expect(lifeSpan).toEqual(58);
+    });
+
+    it('should use the lifeSpan function to determine how much longer the user may live', function() {
+      let userDate = new Date("1993-11-04");
+      let userAge = new AgeCalculator(userDate).checkAge();
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let lifeSpan = calculator.lifespan(userAge);
+      expect(lifeSpan).toEqual(58);
+    });
+
+    it('should use the lifeSpan function to determine how much the user has outlived their expectancy', function() {
+      let userDate = new Date("1923-11-04");
+      let userAge = new AgeCalculator(userDate).checkAge();
+      let calculator = new LifeCalculator(72, 200, 1, 1.1, 0.9, 1, 1, 1.05, 1);
+      let lifeSpan = calculator.lifespan(userAge);
+      expect(lifeSpan).toEqual('You have lived 12 years beyond your expectancy! Congratulations!');
+    });
 
     // life expectancy remaining on celestial body
 

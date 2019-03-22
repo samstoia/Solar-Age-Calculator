@@ -24,4 +24,8 @@ export default class LifeCalculator {
     let lifestyleMod = this.lifestyleMod();
     return ((lifestyleMod / bmi) * 1000 + 45).toFixed(0);
   }
+
+  lifespan(age) {
+    return age > this.lifeExpectancy() ? `You have lived ${age - this.lifeExpectancy()} years beyond your expectancy! Congratulations!` : (this.lifeExpectancy() - age);
+  }
 }
