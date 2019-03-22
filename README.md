@@ -2,7 +2,7 @@
 |:-----:|
 | [**LondresRi**](https://github.com/LondresRi)|
 
-## | **Galactic Age Calculator Project** |
+## | **Solar Age Calculator Project** |
 
 #### By Shawn Lunsford
 ###### Initiated March 22, 2019.
@@ -422,19 +422,19 @@ A web application that allows a user to understand the different solar cycles (y
 
 #### Download Repo
 1. Download and install required software: Node.js, npm
-2. Clone [this repository](https://github.com/LondresRi/Galactic-Age-Calculator): _$ git clone (repo HTTPS)_
+2. Clone [this repository](https://github.com/LondresRi/Solar-Age-Calculator): _$ git clone (repo HTTPS)_
 
 #### Open Locally - Browser
-1. Navigate to the application directory: _$ cd Galactic-Age-Calculator_
+1. Navigate to the application directory: _$ cd Solar-Age-Calculator_
 2. Execute the commands _$ npm install_ and _$ npm run start_
 3. The application will open in your preferred browser
 
 #### Edit
-1. Navigate to the application directory: _$ cd Galactic-Age-Calculator_
+1. Navigate to the application directory: _$ cd Solar-Age-Calculator_
 2. Use your preferred IDE or editor to edit the project
 
 #### Test
-1. Navigate to the application directory: _$ cd Galactic-Age-Calculator_
+1. Navigate to the application directory: _$ cd Solar-Age-Calculator_
 2. Execute _$ npm test_ to run application tests
 
 
