@@ -20,4 +20,19 @@ describe('Calculator', function() {
       expect(result).toEqual(Math.floor((Date.now() - userDate) / 31557600000));
     });
 
+    it('should create a function to convert the user age to a celestial year system', function() {
+      let userDate = new Date("1993-11-04");
+      let userAge = new Calculator(userDate).checkAge();
+      let jupiterAge = userAge * 11.86;
+      expect(jupiterAge).toEqual(Math.floor((Date.now() - userDate) / 31557600000) * 11.86);
+    });
+
+    it('should use the mercuryAge function correctly', function() {
+      let userDate = new Date("1993-11-04");
+      let calculator = new Calculator(userDate);
+      let userAge = calculator.checkAge();
+      let result = calculator.mercuryAge();
+      expect(result).toEqual(Math.floor((Date.now() - userDate) / 31557600000) * 0.24)
+    });
+
 });
