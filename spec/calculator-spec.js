@@ -177,4 +177,37 @@ describe('Calculator', function() {
       expect(result).toEqual(Math.floor((Date.now() - userDate) / 31557600000) * 558)
     });
 
+    // life expectancy
+    it('should determine users life expectancy', function() {
+      let userDate = new Date("1993-11-04");
+      let userAge = calculator.checkAge();
+
+      // height
+      // weight
+      // exercise
+      // alcohol
+      // smoking
+      // drug use
+    });
+
+    // life expectancy remaining on earth
+
+    // life expectancy remaining on celestial body
+
+    // foreach celestial body (x10), life expectancy remaining
+
+    // user age exceeds life expectancy, by how much
+
+    // user age, when is next birthday on earth
+
+    // user age, when is next birthday on celestial body
+
+    // foreach celestial body(x10), user age, when is next birthday
+
+    // how old Keith Richards will be in dog years on jupiter in 2073
+
+    // how many mayfly lives has user outlived
+
+    it('should create a function to ')
+
 });
